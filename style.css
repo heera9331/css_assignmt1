@@ -1,0 +1,46 @@
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex; 
+    flex-direction: column;
+}
+
+.main-content {
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.image-container div {
+    text-align: center;
+    padding: .6rem;
+}
+
+.main-content h1 {
+    color: #c78b36;
+    font-size: 60px;
+}
+
+.main-content p {
+    margin: auto;
+    max-width: 60%;
+    line-height: 25px;
+}
+
+.image-container p {
+    color: #c78b36;
+}

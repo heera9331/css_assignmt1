@@ -1,0 +1,25 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ 
+.content {
+    text-align: center;
+}
+
+.container .row{
+    max-width: 90%;
+    display: flex; 
+    
+    justify-content: space-between;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.container .row .image-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.container .row .image-container  {
+    margin: 5px;
+}

@@ -1,0 +1,25 @@
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    padding: 2rem;
+}
+
+.container .row div img {
+    width: 100%;
+}
+
+.container .row div {
+    padding: 5px;
+    text-align: center;
+}
+
+
+.container .row div button {
+    border: none;
+    background-color: skyblue;
+    padding: 8px;
+}

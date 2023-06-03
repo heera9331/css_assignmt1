@@ -23,3 +23,10 @@
     background-color: skyblue;
     padding: 8px;
 }
+
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        padding: 1rem .5rem;
+    }
+}

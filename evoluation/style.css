@@ -1,0 +1,86 @@
+
+
+
+.grand-father{
+    border: 2px dotted red;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    height: 70vh;
+}
+
+.father {
+    margin: 10px;
+    border: 2px dotted rgb(0, 0, 0);
+    width: 50%;
+}
+
+.uncle {
+    margin: 10px;
+    border: 2px dotted black;
+    width: 50%;
+}
+
+.father .person {
+    border: 2px dotted black;
+    display: flex;
+    width: 50%;
+    height: 80%;
+    margin: 1rem auto;
+    justify-content: space-around;
+}
+
+#father .child {
+    border: 2px solid black;
+    /* width: 80%; */
+    margin: 10px;
+}
+  
+#sub-child-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#sub-child-group .sub-child {
+    border: 2px dotted black;
+}
+
+#sub-child-group .sub-child {
+    border: 2px solid black;
+    margin: 10px 5px;
+    height: 20%;
+}
+
+.uncle .person {
+    width: 1fr 2fr 1fr;
+    /* width: 100%; */
+    border: 2px dotted black;
+    margin: 2% 5%;
+}
+
+#uncle .person .child {
+    border: 2px dotted green;
+    /* width: 80%; */
+    margin: 10px;
+}
+
+#uncle .sub-child {
+    border: 2px dotted black;
+    margin: 10px;
+    padding: .6rem;
+    text-align: center;
+}
+
+#uncle .person .child {
+    border: 2px solid black;
+}
+
+#sub-child1 {
+    background-color: rgb(251, 138, 0);
+}
+#sub-child2 {
+    background-color: rgb(255, 255, 255);
+}
+#sub-child3 {
+    background-color: rgb(0, 158, 66);
+}

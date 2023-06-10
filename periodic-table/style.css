@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title h1{
+    text-align: center;
+}
+.title, .table {
+    max-width: 80%;
+    margin: 2rem auto;
+}
+.table .table-row-wrapper {
+    margin: 1rem auto;
+    /* background-background-color: black; */
+}
+.table-row-wrapper .row{
+    display: flex;
+    justify-content: space-between
+}
+.row .icon {
+    /* border: 2px solid red; */
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 2px solid black;
+    visibility: hidden;
+}
+ 
+.row .elm {
+    visibility: visible;
+}
+
+.row.lengthenides, .row.actinides {
+    display: flex;
+    justify-content: center;
+}
+
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orangered;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
+}
+
+.light-green {
+    background-color: rgb(77, 146, 77);
+}
+
+.pink {
+    background-color: rgb(227, 44, 75);
+}
+
+.pinkis {
+    background-color: rgb(219, 37, 67);
+}
+
+.yellow {
+    background-color: rgb(253, 170, 5);
+}
+
+.dark-green {
+    background-color: rgb(47, 93, 47);
+}
+
+.light-green1 {
+    background-color: rgb(56, 71, 56);
+}
+
+.dark-gray {
+    background-color: rgb(130, 99, 99);
+}
+.dark-red{
+    background-color: darkred;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.light-pink {
+    background-color: lightpink;
+    border: 5px solid black;
+}
+
+
+.table .row.lengthenides .elm, .row.actinides .elm {
+    margin: 0;
+}
+
+
+.silver {
+    background-color: rgb(59, 138, 39);
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    position: absolute;
+    left: 23%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}
+
+.silver p.symbol {
+    font-size: 4.5rem;
+}
+.silver p.serial {
+    text-align: right;
+    
+}

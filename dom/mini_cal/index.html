@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI Calculator</title>
+    <style>
+        .cal-btns {
+            display: flex;
+            justify-content: start;
+            margin: 4rem auto;
+        }
+        .cal-btns button {
+            margin: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+
+    <div class="main">
+        <label for="num1">Num1</label>
+        <input type="number" placeholder="Enter 1st number" id="num1">
+        <label for="num2">Num1</label>
+        <input type="number" placeholder="Enter 2st number" id="num2">
+        <br>
+        <div class="cal-btns">
+            <button onclick="add()">Add</button><br>
+            <button onclick="sub()">Subtract</button><br>
+            <button onclick="mul()">Multiply</button><br>
+            <button onclick="div()">Division</button>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

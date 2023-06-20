@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body {
+
+            background-color: rgb(255, 244, 250);
+        }
+         .container {
+            display: grid;
+            max-width: 95%;
+            margin: 2rem auto;
+            grid-template-columns: repeat(3, 1fr);
+
+         }
+         .container .box {
+            background-color: white;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         }
+         .container .box .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         .container .box .head h3 {
+            color: goldenrod;
+         }
+
+         @media screen and (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+         }
+         @media screen and (max-width: 320px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="head">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate rerum vero ratione a nostrum dignissimos neque aperiam! Dolore quae pariatur officia laboriosam optio, omnis dolorem est quos mollitia ad?</p>
+        </div>
+          
+        <div class="box">
+            <div class="head">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate rerum vero ratione a nostrum dignissimos neque aperiam! Dolore quae pariatur officia laboriosam optio, omnis dolorem est quos mollitia ad?</p>
+        </div>
+          
+        <div class="box">
+            <div class="head">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate rerum vero ratione a nostrum dignissimos neque aperiam! Dolore quae pariatur officia laboriosam optio, omnis dolorem est quos mollitia ad?</p>
+        </div>
+          
+        <div class="box">
+            <div class="head">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate rerum vero ratione a nostrum dignissimos neque aperiam! Dolore quae pariatur officia laboriosam optio, omnis dolorem est quos mollitia ad?</p>
+        </div>
+          
+        <div class="box">
+            <div class="head">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate rerum vero ratione a nostrum dignissimos neque aperiam! Dolore quae pariatur officia laboriosam optio, omnis dolorem est quos mollitia ad?</p>
+        </div>
+          
+        <div class="box">
+            <div class="head">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate rerum vero ratione a nostrum dignissimos neque aperiam! Dolore quae pariatur officia laboriosam optio, omnis dolorem est quos mollitia ad?</p>
+        </div>
+          
+    </div>
+</body>
+</html>

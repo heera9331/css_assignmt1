@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+</head>
+
+<body>
+    <label for="otp">Enter OTP here</label>
+    <input type="number" placeholder="enter otp here" id="otp">
+
+    <button onclick="createPromise()">Submit</button>
+
+    <script>
+
+        function createPromise() {
+            let getOtp = document.getElementById("otp").value;
+            console.log(getOtp);
+            return new Promise((resolve,reject) => {
+                setTimeout(() => {
+                    if (getOtp === "1234") {
+                        resolve("resolved");
+                    } else {
+                        reject("wrong otp");
+                    }
+                }, 2000);
+            }).then((msg) => {
+                console.log("Promise", msg);
+            }).catch((error) => {
+                console.log( error);
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

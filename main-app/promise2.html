@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 2</title>
+</head>
+
+<body> 
+
+    <p>Output in the console window</p>
+
+
+    <script>
+        function waitPromise(time) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve();
+                }, time);
+            })
+        }
+
+        console.log(waitPromise(2000).then(() => {
+            console.log('resolved');
+        }));
+
+        
+    </script>
+</body>
+
+</html>

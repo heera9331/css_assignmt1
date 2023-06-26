@@ -19,16 +19,32 @@
 // })
 
 
-let count = -10;
-let myPromise = new Promise((resolve, reject) => {
-    if (count > 0) {
-        resolve();
-    } else {
-        reject();
-    }
-}).then(() => {
-    console.log('resolved');
-}).catch(() => {
-    console.log('rejected');
-})
+// let count = -10;
+// let myPromise = new Promise((resolve, reject) => {
+//     if (count > 0) {
+//         resolve();
+//     } else {
+//         reject();
+//     }
+// }).then(() => {
+//     console.log('resolved');
+// }).catch(() => {
+//     console.log('rejected');
+// })
 
+
+
+
+
+// let myPromise = new Promise((resolve, reject) => {
+
+//     setTimeout((time) => {
+//         return "Resolve";
+//     }, time);
+// }).then(() => {
+//     resolve();
+// }).catch(() => {
+//     reject();
+// });
+
+// console.log(myPromise);

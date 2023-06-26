@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Todo</title>
+    <style>
+        #table {
+            border-collapse: collapse;
+            border: 1;
+        }
+
+        .container {
+            max-width: 60%;
+            margin: 2rem auto;
+            background-color: rgb(192, 192, 192);
+            
+        }
+
+        #table, tr, th {
+            padding: 10px;
+            border-color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <table id="table" border="1">
+            <tr>
+                <thead>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                </thead>
+            </tr>
+
+        </table>
+    </div>
+
+
+    <script>
+
+        const API = "https://jsonplaceholder.typicode.com/todos";
+        let result = null;
+
+        fetch(API)
+            .then(response => response.json())
+            .then(data => {
+                result = data;
+                // console.log(result);
+                // Do something with the result here
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+        setTimeout(() => {
+            console.log(result);
+
+            let table = document.getElementById("table");
+
+            for (let i = 0; i < result.length; i++) {
+                let task = result[i];
+                let row = `<tr>
+                    <td>${task.id}</td>
+                    <td>${task.title}</td>
+                    <td>${task.completed}</td>
+                    </tr>`;
+                table.innerHTML += row;
+            }
+
+        }, 2000)
+
+
+
+    </script>
+</body>
+
+</html>

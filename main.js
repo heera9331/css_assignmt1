@@ -48,3 +48,6 @@
 // });
 
 // console.log(myPromise);
+
+
+console.log(typeof('str') === 'string');

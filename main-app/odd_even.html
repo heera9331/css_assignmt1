@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>given data was an integer number</p>
+    <script>
+        const getData = (data) => {
+            return new Promise((resolve, reject) => {
+                if (typeof (data) === 'string') {
+                    reject('error');
+                }
+                else if (data % 2 !== 0) {
+                    setTimeout(() => {
+                        resolve('odd');
+                    }, 2000)
+                }
+                else {
+                    setTimeout(() => {
+                        reject('even')
+                    }, 4000);
+                }
+            })
+        }
+
+        getData(2).then((resolve) => {
+            document.write(resolve);
+        }).catch((error) => {
+            document.write(error);
+            
+        });
+    </script>
+</body>
+
+</html>

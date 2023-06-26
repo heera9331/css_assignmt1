@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timer</title>
+    <script>
+        var timerInterval;
+        var time = { hours: 0, minutes: 0, seconds: 0 };
+
+        function startTimer() {
+            var totalSeconds = time.hours * 3600 + time.minutes * 60 + time.seconds;
+            if (totalSeconds <= 0) {
+                return;
+            }
+
+            timerInterval = setInterval(function () {
+                if (time.seconds > 0) {
+                    time.seconds--;
+                } else {
+                    if (time.minutes > 0) {
+                        time.minutes--;
+                        time.seconds = 59;
+                    } else {
+                        if (time.hours > 0) {
+                            time.hours--;
+                            time.minutes = 59;
+                            time.seconds = 59;
+                        } else {
+                            clearInterval(timerInterval);
+                            alert("Timer finished!");
+                        }
+                    }
+                }
+
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            time = { hours: 0, minutes: 0, seconds: 0 };
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            var timerDisplay = document.getElementById("timer-display");
+            timerDisplay.textContent = formatTime(time);
+        }
+
+        function formatTime(time) {
+            var hours = padTime(time.hours);
+            var minutes = padTime(time.minutes);
+            var seconds = padTime(time.seconds);
+            return hours + ":" + minutes + ":" + seconds;
+        }
+
+        function padTime(value) {
+            return value.toString().padStart(2, "0");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Timer</h1>
+    <label>Hours:</label>
+    <input type="number" id="hours" min="0">
+    <label>Minutes:</label>
+    <input type="number" id="minutes" min="0">
+    <label>Seconds:</label>
+    <input type="number" id="seconds" min="0">
+    <br>
+    <br>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+    <br>
+    <br>
+    <div id="timer-display"></div>
+</body>
+
+</html>

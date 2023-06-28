@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Shopping</h1>
+    <div class="search">
+        <input type="text" name="searchField" id="search" placeholder="search product - i.e. Laptop" onchange="handleSearch(this)">
+        <button onclick="handleSearch(this)">Search <p></p> </button>
+    </div>
+    <div class="sort">
+        <button onclick="sortAToZ()" class="btn">Sort A-Z</button>
+        <button onclick="sortZtoA()" class="btn">Sort Z-A</button>
+        <button onclick="sortPriceAsc()" class="btn">Sort Low to High (price)</button>
+        <button onclick="sortPriceDesc()" class="btn">Sort High to Low (price)</button>
+        <button onclick="sortPopularity()" class="btn">Popularity</button>
+    </div>
+    <div class="product-wrapper"> 
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+

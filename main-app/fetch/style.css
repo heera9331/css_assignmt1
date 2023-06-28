@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.heading {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.product-wrapper {
+    display: grid;
+    max-width: 90%;
+    margin: 2rem auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-wrapper .product {
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    padding: 1rem; 
+
+}
+.product-wrapper .product .img {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.product-wrapper .product .category {
+    margin: 1rem auto;
+}
+
+.product-wrapper .product img {
+    width: 80%;
+}
+
+.buy-btn-wrapper {
+    display: flex;
+    margin: 2rem 0 0 0;
+}
+
+.buy-btn-wrapper .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 153, 0);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-size: large;
+}
+
+/* search context */
+
+.search {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.search input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.search button,.sort .btn  {
+    padding: 1rem;
+    background-color: rgb(255, 111, 0);
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort .btn {
+    margin: 0 1rem;
+    background-color: rgb(0, 42, 54);
+}

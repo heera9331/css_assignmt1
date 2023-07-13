@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Slideshow</h1>
+    <div class="container">
+        <img src="./images/image-1.jpg" alt="img" class="img" width="80%">
+
+        <div class="btns">
+            <button class="btn" id="preBtn" onclick="preImg()">Previous</button>
+            <button class="btn" id="playBtn" onclick="play(this)">Play</button>
+            <button class="btn" id="nextBtn" onclick="nextImg()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const play = (e) => {
+            if (e.innerHTML == 'Play') {
+                e.innerHTML = 'Stop'
+                playSlideshow();
+            }
+            else {
+                e.innerHTML = 'Play'
+                stopSlideshow();
+            }
+        }
+        let id = null;
+
+        const playSlideshow = () => {
+            let imgCount = 1;
+            id = setInterval(() => {
+                let imgPath = `./images/image-${imgCount}.jpg`;
+                imgUrl = document.querySelector("img").setAttribute("src", imgPath);
+                console.log(imgPath);
+                imgCount++;
+                if (imgCount > 10) {
+                    imgCount = 1;
+                }
+            }, 700);
+        }
+
+
+        const stopSlideshow = () => {
+            clearInterval(id);
+            console.log('stop');
+        }
+
+        let imgCount = Math.abs(Number(document.querySelector("img").getAttribute("src").substring(14, 17)));
+
+
+        const preImg = () => {
+            if (id != null) {
+                stopSlideshow();
+                id = null;
+            }
+
+            if (imgCount == 0) {
+                imgCount = 10;
+            }
+            console.log(imgCount);
+            console.log(document.querySelector("img"));
+            let newUrl = `./images/image-${imgCount}.jpg`;
+            imgCount -= 1
+            console.log(newUrl);
+            document.querySelector("img").setAttribute("src", newUrl)
+        }
+
+        const nextImg = () => {
+            if (id != null) {
+                stopSlideshow();
+                id = null;
+            }
+
+            if (imgCount == 11) {
+                imgCount = 1;
+            }
+            console.log(imgCount);
+            console.log(document.querySelector("img"));
+            let newUrl = `./images/image-${imgCount}.jpg`;
+            imgCount += 1
+            console.log(newUrl);
+            document.querySelector("img").setAttribute("src", newUrl)
+        }
+    </script>
+</body>
+
+</html>

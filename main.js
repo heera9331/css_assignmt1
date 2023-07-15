@@ -49,5 +49,17 @@
 
 // console.log(myPromise);
 
+// 
+// console.log(typeof('str') === 'string');
 
-console.log(typeof('str') === 'string');
+
+
+
+var user = "Arya";
+
+function sayHello() {
+    var name = 'hi';
+    return `Hello ${user}`;
+}
+
+var userMsg = sayHello(user); 

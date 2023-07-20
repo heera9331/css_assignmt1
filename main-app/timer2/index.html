@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stopwatch</title>
+    <style>
+        #stopwatch {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="stopwatch">00:00</div>
+    <button onclick="startStopwatch()">Start</button>
+    <button onclick="pauseStopwatch()">Pause</button>
+    <button onclick="resetStopwatch()">Reset</button>
+
+    <script>
+        let timerInterval;
+        let elapsedTime = 0;
+        let isRunning = false;
+
+        function startStopwatch() {
+            if (!isRunning) {
+                isRunning = true;
+                timerInterval = setInterval(updateStopwatch, 1000);
+            }
+        }
+
+        function pauseStopwatch() {
+            clearInterval(timerInterval);
+            isRunning = false;
+        }
+
+        function resetStopwatch() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            elapsedTime = 0;
+            updateStopwatch();
+        }
+
+        function updateStopwatch() {
+            elapsedTime += 1;
+            const minutes = Math.floor(elapsedTime / 60);
+            const seconds = elapsedTime % 60;
+
+            const formattedTime = formatTime(minutes) + ":" + formatTime(seconds);
+            document.getElementById("stopwatch").textContent = formattedTime;
+        }
+
+        function formatTime(time) {
+            return time.toString().padStart(2, '0');
+        }
+    </script>
+</body>
+</html> 
